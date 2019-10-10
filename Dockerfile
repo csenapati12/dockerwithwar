@@ -1,8 +1,8 @@
-FROM ubuntu:16.04
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y curl && \
-    apt-get install -y  software-properties-common && \
+FROM scratch
+RUN yum update && \
+    yum upgrade -y && \
+    yum install -y curl && \
+    yum install -y  software-properties-common && \
     add-apt-repository ppa:webupd8team/java -y && \
     apt-get update && \
     echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
